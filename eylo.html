@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title> bas </title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: black;
+        color: white;
+        margin: 0;
+        height: 100vh;
+        justify-content: center;
+        align-items:center;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+</style>
+<body>
+    <button onclick="basla()">Basla</button>
+    <h1 id="sure">10</h1>
+
+    <img id="gif1" src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif"
+         style="display:none; width:350px;">
+    <img id="gif2" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmVqd281NGk2amNrcnltbXJob3ZjaHRmcXNrbGVwM3VxNWgzNm04cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xBI67bRulv8pxZpYaZ/giphy.gif"
+         style="display:none; width:300px;">
+    <script>
+        function basla() {
+            document.getElementById("gif2").style.display = "block";
+            let zaman = 10;
+
+            let sayac = setInterval(geriSay, 1000);
+
+            function geriSay() {
+                document.getElementById("sure").style.display = "block";
+                document.getElementById("sure").innerHTML = zaman;
+
+                zaman--;
+
+                if (zaman < 0) {
+
+                    clearInterval(sayac);
+                    document.getElementById("gif2").style.display = "none";
+                    document.getElementById("sure").style.display = "none";
+
+                    document.getElementById("gif1").style.display = "block";
+                    setTimeout(bitis, 5000);
+                }
+
+                function bitis() {
+                    document.getElementById("gif1").style.display = "none";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
