@@ -6,6 +6,20 @@
     <title> bas </title>
 </head>
 <style>
+    .buyukButon {
+    font-size: 35px;
+    padding: 20px 40px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.buyukButon:hover {
+    background-color: #45a049;
+}
+
     body {
         text-align: center;
         background-color: black;
@@ -21,7 +35,8 @@
     }
 </style>
 <body>
-    <button onclick="basla()">Basla</button>
+   <button class="buyukButon" onclick="basla()">Basla</button>
+
     <h1 id="sure">10</h1>
 
     <img id="gif1" src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif"
@@ -60,5 +75,6 @@
     </script>
 
 </body>
+
 
 </html>
